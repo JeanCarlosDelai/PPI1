@@ -34,7 +34,7 @@
 //   <MultiElementos />
 //   , elemento);
 
-// Atividade 1.3.1
+// Atividade 1.3.1 - Estados e Eventos
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -55,7 +55,7 @@
 //   </div>
 //   , elemento);
 
-// Atividade 1.3.2
+// Atividade 1.3.2 - React Hooks
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -83,10 +83,29 @@
 //     <SemHookStateEffect />
 //     , elemento);
 
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import ComHookStateEffect from './componentes/ComHookStateEffect';
+// const elemento = document.getElementById('root');
+// ReactDOM.render(
+//     <ComHookStateEffect />
+//     , elemento);
+
+// Atividade 1.3.3 - useReducer vs useState no React
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import CounterState from './componentes/CounterState'
+// ReactDOM.render(
+//  <CounterState />,
+//  document.getElementById('root')
+// );
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ComHookStateEffect from './componentes/ComHookStateEffect';
-const elemento = document.getElementById('root');
+import CounterReducer from './componentes/CounterReducer'
 ReactDOM.render(
-    <ComHookStateEffect />
-    , elemento);
+    <CounterReducer />,
+    document.getElementById('root')
+);
+
