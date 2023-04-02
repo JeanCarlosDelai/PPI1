@@ -1,3 +1,5 @@
+// Atividade 1.2
+
 import React from 'react';
 
 //Definindo dois componetes com Arrow functions que receem dados atráves de props.

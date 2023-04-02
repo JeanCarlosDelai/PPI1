@@ -1,3 +1,5 @@
+// Atividade 1.2
+
 //Importando dependencias do React, sem isso não podemos usar o framework
 import React from 'react';
 

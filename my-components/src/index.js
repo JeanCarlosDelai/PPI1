@@ -1,4 +1,4 @@
-// // Atividade 1.2
+// Atividade 1.2
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -34,7 +34,7 @@
 //   <MultiElementos />
 //   , elemento);
 
-// Atividade 1.3
+// Atividade 1.3.1
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -55,4 +55,38 @@
 //   </div>
 //   , elemento);
 
+// Atividade 1.3.2
 
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import SemHookState from './componentes/SemHookState';
+
+// const elemento = document.getElementById('root');
+// ReactDOM.render(
+//     <SemHookState />
+//     , elemento);
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import ComHookState from './componentes/ComHookState';
+
+// const elemento = document.getElementById('root');
+// ReactDOM.render(
+//     <ComHookState />
+//     , elemento);
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import SemHookStateEffect from './componentes/SemHookStateEffect';
+// const elemento = document.getElementById('root');
+// ReactDOM.render(
+//     <SemHookStateEffect />
+//     , elemento);
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ComHookStateEffect from './componentes/ComHookStateEffect';
+const elemento = document.getElementById('root');
+ReactDOM.render(
+    <ComHookStateEffect />
+    , elemento);
