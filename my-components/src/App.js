@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+
+// Atividade 1.3.4 - Usando a Context API no React
+
+import React from 'react';
+import HomePage from './componentes/HomePage';
+import { UserProvider } from './componentes/UserContext';
 
 function App() {
+  const user = { name: 'Tania', loggedIn: true }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider value={user}>
+      <HomePage />
+    </UserProvider>
   );
 }
 
