@@ -1,15 +1,11 @@
-
-// Atividades Práticas - React Router
-
 import React from 'react'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'
+import App from __dirname + "/App.jsx";
+import './index.css'
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById('root')
-);
-
+)

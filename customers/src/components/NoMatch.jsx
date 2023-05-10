@@ -1,8 +1,4 @@
-
-// Atividades Práticas - React Router
-
 const NoMatch = () => {
-    return <p>Não há nada aqui: 404!</p>;
+  return <p>Não há nada aqui: 404!</p>;
 };
-
 export default NoMatch;

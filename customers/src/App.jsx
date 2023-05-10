@@ -1,38 +1,63 @@
+import { useState } from 'react'
+import './App.css'
+import { UserProvider } from './components/UserContext';
+import HomePage from './components/HomePage';
+import HookForm from './components/HookForm';
+import Router from './components/Router';
 
-// Atividades Práticas - React Router
+import MyPost from './apiAxios/MyPost';
+import MyDelete from './apiAxios/MyDelete';
+import MyAsyncAwait from './apiAxios/MyAsyncAwait';
 
-import * as React from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import Home from "./components/Home";
-import Users from "./components/Users";
-import User from "./components/User";
-import Layout from "./components/Layout";
-import NoMatch from "./components/NoMatch";
-const App = () => {
-  const navigate = useNavigate();
-  const [users, setUsers] = React.useState([
-    { id: "1", fullName: "Robin Wieruch" },
-    { id: "2", fullName: "Sarah Finnley" },
-  ]);
-  const handleRemoveUser = (userId) => {
-    setUsers((state) => state.filter((user) => user.id !== userId));
-    //Navega para a rota /users
-    navigate("/users");
-  };
+function App() {
+
+  //user.name sera utilizado dentro de App
+  const user = { name: 'Tania', loggedIn: true }
+
+
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="users" element={<Users users={users} />}>
-          <Route
-            path=":userId"
-            element={<User onRemoveUser={handleRemoveUser} />}
-          />
-        </Route>
-        <Route path="*" element={<NoMatch />} />
-      </Route>
-    </Routes>
+    <div>
+      {/* <UserProvider value={user}>
+        <HomePage />
+      </UserProvider>
+      <HookForm />
+      <Router /> */}
+      <button onClick={() => {
+        MyPost()
+
+
+        console.log('clic')
+      }
+      }>
+        create new item
+      </button>
+
+      <button onClick={() => {
+        MyDelete();
+
+        console.log('clic')
+      }
+      }>
+        Delete item
+      </button>
+
+      <button onClick={() => {
+
+        MyAsyncAwait();
+
+
+        console.log('clic')
+      }
+      }>
+        Atualizar
+      </button>
+
+
+      <MyAsyncAwait />
+    </div>
+
+
   );
-};
-export default App;
+}
+
+export default App
