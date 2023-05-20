@@ -1,8 +1,11 @@
+//Importando módulo Express
 const express = require('express');
+//Criando uma aplicação express
+const app = express();
 
 const jwt = require('jsonwebtoken');
 
-const app = express();
+
 
 app.use(express.json());
 
@@ -35,8 +38,8 @@ app.post('/login', (req, res) => {
     if (user) {
         // Gera um token de acesso
         const accessToken = jwt.sign({
-            username: user.username, role:
-                user.role
+            username: user.username, 
+            role: user.role
         }, accessTokenSecret, { expiresIn: '2m' });
         res.json({
             accessToken
