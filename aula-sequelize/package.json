@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql2": "^3.3.2",
+    "mysql2": "^3.3.3",
     "sequelize": "^6.31.1"
   },
   "devDependencies": {
